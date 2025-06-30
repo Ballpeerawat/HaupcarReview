@@ -4,17 +4,17 @@ from datetime import datetime
 import json
 
 # ====== STEP 1: Connect to MongoDB ======
-mongo_client = MongoClient("mongodb://peerawat.s:7voRMq5NZpcGfDUAY58LYwhntMt96Q@mongo.prod.k8s.haupcar.com:27017/?authSource=admin&readPreference=primary&directConnection=true&ssl=false")  # แก้ URL ตามจริง
-mongo_db = mongo_client["ts-restful-api"]                  # แก้ชื่อ DB
+mongo_client = MongoClient("")  # แก้ URL ตามจริง
+mongo_db = mongo_client[""]                  # แก้ชื่อ DB
 collection = mongo_db["renter_reviews"]            # แก้ชื่อ Collection
 
 # ====== STEP 2: Connect to MySQL ======
 mysql_conn = mysql.connector.connect(
-    host="data.db.haupcar.com", # แก้ตาม MySQL host ของคุณ
-    user="peerawat.s@haupcar.com",      # แก้ตาม user ของคุณ
-    password="ds_QN53yeaF6L1}5",  # แก้รหัสผ่าน
-    database="haupcar", # ใช้ฐานข้อมูล haupcar ตามตัวอย่าง
-    port=25060
+    host="", # แก้ตาม MySQL host ของคุณ
+    user="",      # แก้ตาม user ของคุณ
+    password="",  # แก้รหัสผ่าน
+    database="", # ใช้ฐานข้อมูล haupcar ตามตัวอย่าง
+    port=
 )
 cursor = mysql_conn.cursor()
 
